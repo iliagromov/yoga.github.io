@@ -1,0 +1,20 @@
+mixin item(icon,title)
+    .advantages-items__item
+        .advantages-items__item-container
+            div(class=icon)
+            h4.page__title-h4=title
+            p.page__text A un Angleso  semblar un simplificat Angles, quam un skepticbridge.
+                
+section.advantages
+    .wrapper
+        h2.page__title-h2 Advantages of Yoga
+        p.page__text At solmen li esser necessi uniform grammatica, pronunciation 
+        .advantages-items
+            +item('page__icon_handfly','Mind and soul')
+            +item('page__icon_assana','Yoga for real energy')
+            +item('page__icon_assana-2','Good for health')
+            +item('page__icon_assana-3','Renewing your mind')
+            +item('page__icon_assana-4','Relaxation and Refresh')
+            +item('page__icon_assana-5','Meditation classes')
+    .page__img
+        img(src="assets/img/img-girl-2.png", alt="")       

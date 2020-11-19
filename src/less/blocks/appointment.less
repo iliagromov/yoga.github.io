@@ -1,0 +1,83 @@
+.appointment{
+    padding: 50px 0;
+    &-block{
+        .row-flex();
+        padding-top: 30px;
+        &__form{
+            .col();
+            .size(6);
+            .size-ssm(12);
+            .ssm(order,1);
+            padding: 35px 30px;
+            border-radius: 5px;
+            border: 1px solid @color_gray-c7;
+            .page__form{
+                .row-flex();
+                .page__input{
+                    .col();
+                    .size(6);
+                    .size-ssm(12);
+                    margin-bottom: 15px;
+                    height: 40px;
+                    border-radius: 3px;
+                    border: 1px solid @color_gray-c7;
+                }
+                .page__textarea{
+                    .col();
+                    .size(12);
+                    height: 90px;
+                    resize: none;
+                    border: 1px solid @color_gray-c7;
+                    margin-bottom: 15px;
+                }
+                .page__btn{
+                    .col();
+                    .size(12);
+                }
+                .page__title-h3{
+                    font-size: 30px;
+                    color: @color_blue;
+                }
+            }
+        }
+        &__time{
+            padding-top: 50px;
+            .col();
+            .size(6);
+            .size-ssm(12);
+            .ssm-block({
+                order:0;
+                padding-top: 0;
+                padding-bottom: 50px;
+            });
+            .page__title-h3{
+                font-size: 25px;
+                color: @color_blue;
+            }
+            .page__text_semibold{
+                font-size: 18px;
+                text-align: center;
+            }
+        }
+    }
+    &.animated{
+        .page__title-h2,
+        .page__text{
+            .animated({
+                .fadeInDown();
+            });
+        }
+        .appointment-block__form{
+            .animated({
+                .fadeInLeft();
+                .delay(.2s);
+            });
+        }
+        .appointment-block__time{
+            .animated({
+                .fadeInRight();
+                .delay(.2s);
+            });
+        }
+    }
+}

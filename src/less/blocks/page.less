@@ -1,0 +1,86 @@
+.page{
+    position: relative;
+    background: @color_white;
+    z-index: 1;
+    &__title{
+        &-h1{
+            font-size: 40px;
+            letter-spacing: 1px;
+            line-height: 40px;
+            color: @color_white;
+            font-family: '@{JosefinSans}-Bold';
+        }
+        &-h2{
+            font-size: 28px;
+            letter-spacing: 1px;
+            line-height: 40px;
+            color:@color_blue;
+            font-family: '@{RobotoSlab}-Bold';
+            text-align: center;
+        }
+        &-h3{
+            font-size: 25px;
+            letter-spacing: 1px;
+            line-height: 40px;
+            color: #000000;
+            font-family: '@{JosefinSans}-Bold';
+            text-align: center;
+           
+        }
+        &-h4{
+            font-size: 20px;
+            letter-spacing: 1px;
+            line-height: 25px;
+            color: #444444;
+            font-family:  '@{JosefinSans}-Semibold';
+            text-align: right;
+        }
+    }
+    &__text{
+        font-size: 15px;
+        letter-spacing: 0px;
+        line-height: 25px;
+        color: @color_gray-4;
+        text-align: center;
+        font-family: @fontRegular;
+        &_semibold{
+            font-family: @fontSemibold;
+        }
+    }
+    &__btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3px;
+        color: @color_white;
+        background-color: @color_pink;
+        border: 1px solid @color_pink;
+        font-size: 20px;
+        letter-spacing: 1px;
+        line-height: 25px;
+        height: 58px;
+        
+        font-family: '@{JosefinSans}-Bold';
+        text-align: center;
+        transition: all ease-out .5s;
+        &:hover{
+            color: @color_pink;
+            background-color: transparent;
+        }
+        &_blue{
+            color: @color_white;
+            background-color: @color_blue;
+            border: 1px solid @color_blue;
+            &:hover{
+                color: @color_blue;
+                background-color: transparent;
+            }
+        }
+    }
+    &__link{
+        font-size: 18px;
+        letter-spacing: 0px;
+        color: @color_white;
+        font-family: '@{JosefinSans}-Regular';
+    }
+}

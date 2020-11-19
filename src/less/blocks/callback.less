@@ -1,0 +1,24 @@
+.callback{
+    padding: 50px 0; 
+    .page__btn{
+        .size(3.5);
+        .size-ssm(12);
+        
+        margin: 30px auto 0;
+    }
+    &.animated{
+        .page__title-h2,
+        .page__text,
+        .page__btn{
+            .animated({
+                .zoomIn();
+            });
+        }
+        .page__text{
+            .delay(.2s);
+        }
+        .page__btn{
+            .delay(.4s);
+        }
+    }
+}

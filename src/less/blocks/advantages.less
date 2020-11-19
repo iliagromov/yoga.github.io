@@ -1,0 +1,163 @@
+.advantages{
+    padding: 50px 0 70px;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transition: all ease-out .5s;
+    .wrapper{
+        position: relative;
+        z-index: 1;
+    }
+    &-items{
+        .row-flex();
+        position: relative;
+        &__item{
+            .col();
+            .size(6);
+            
+            .size-xs(12);
+            display: flex;
+           
+           
+            &-container{
+                .col();
+                .size(8);
+                .size-sm(12);
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                justify-content: center;
+                .sm-block({
+                    align-items: center;
+                });
+               
+            }
+            &:nth-of-type(odd){
+
+                .advantages-items__item-container{
+                    .shift-left(-2);
+                    .shift-sm-left(0);
+                }
+            }
+            &:nth-of-type(3){
+                .advantages-items__item-container{
+                    .shift-left(-1);
+                    .shift-sm-left(0);
+                }
+            }
+            &:nth-of-type(5){
+                .advantages-items__item-container{
+                    .shift-left(-3);
+                    .shift-sm-left(0);
+                }
+            }
+            &:nth-of-type(even){
+                justify-content: flex-end;
+                
+                .advantages-items__item-container{
+                    align-items: flex-start;
+                    .sm(align-items, center);
+                    .page__text{
+                        text-align: left;
+                        .sm( text-align, center);
+                    }
+                }
+            }
+            &:nth-of-type(2){
+                .advantages-items__item-container{
+                   .shift-right(2);
+                   .shift-sm-right(0);
+                }
+            }
+            &:nth-of-type(4){
+                .advantages-items__item-container{
+                   
+                   .shift-right(-2);
+                   .shift-sm-right(0);
+
+                }
+            }
+            &:nth-of-type(6){
+                .advantages-items__item-container{
+                  
+                   .shift-right(-4.5);
+                   .shift-sm-right(0);
+                }
+            }
+            
+            .page__text{
+                text-align: right;
+                .sm( text-align, center);
+            }
+            .page__icon{
+                &_handfly{
+                    .sprite(@icon-handfly);
+                }
+                &_assana{
+                    .sprite(@icon-assana);
+                }
+                &_assana-2{
+                    .sprite(@icon-assana-2);
+                }
+                &_assana-3{
+                    .sprite(@icon-assana-3);
+                }
+                &_assana-4{
+                    .sprite(@icon-assana-4);
+                }
+                &_assana-5{
+                    .sprite(@icon-assana-5);
+                }
+            }
+        }
+        
+    }
+    .page__img{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        left: 40px;
+        .sm(display,none);
+    }
+    &.animated{
+        opacity: 1;
+        .page__title-h2,
+        .page__text{
+            .animated({
+                .fadeInDown();
+            });
+        }
+        .advantages-items__item{
+            &:nth-child(odd){
+                .animated({
+                    .fadeInLeft();
+                });
+            }
+            &:nth-child(3){
+               .delay(.2s);
+            }
+            &:nth-child(5){
+               .delay(.4s);
+            }
+            &:nth-child(even){
+                .animated({
+                    .fadeInRight();
+                });
+            }
+            &:nth-child(4){
+                .delay(.2s);
+             }
+             &:nth-child(6){
+                .delay(.4s);
+             }
+        }
+        .page__img{
+            .animated({
+                .fadeInUp();
+                .delay(.4s);
+            });
+        }
+    }
+}

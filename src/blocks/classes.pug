@@ -1,0 +1,16 @@
+mixin item(img, title)
+    .classes-items__item
+        .page__img
+            img(src=img, alt="")
+        h3.page__title-h3=title
+        p.page__text Li Europan lingues membres del sam familie. 
+
+section.classes
+    .wrapper
+        h2.page__title-h2 Our Yoga Classes
+        p.page__text At solmen li esser necessi uniform grammatica, pronunciation 
+        .classes-items
+            +item("assets/img/img-yoga-1.jpg", "Kundalini Yoga")
+            +item("assets/img/img-yoga-2.jpg", "Basic Yoga")
+            +item("assets/img/img-yoga-3.jpg", "Iyengar Yoga")
+            +item("assets/img/img-yoga-4.jpg", "Advanced Yoga")

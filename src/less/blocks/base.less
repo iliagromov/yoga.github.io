@@ -1,0 +1,61 @@
+@import '../fonts/fonts.less';
+.reset();
+
+.wrapper{
+    .wrapper();
+}
+
+.scrollbar(@color_scrollbar-track, @color_scrollbar-thumb);
+
+
+@font-face {
+  .font(@font; @fontRegular);
+}
+@font-face {
+  .font(@font; @fontSemibold);
+}
+@font-face {
+  .font(@font; @fontItalic);
+}
+@font-face {
+  .font(@JosefinSans; '@{JosefinSans}-Regular');
+}
+@font-face {
+  .font(@JosefinSans; '@{JosefinSans}-Bold');
+}
+@font-face {
+  .font(@JosefinSans; '@{JosefinSans}-Semibold');
+}
+@font-face {
+  .font(@RobotoSlab; '@{RobotoSlab}-Bold');
+}
+html{
+  scroll-behavior: smooth;
+}
+html:not([data-scroll='0']) .header {
+  background: rgba(2, 2, 2, 0.4);
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  .sm(display, none);
+  .header-block__logo-text{
+    color: @color_white;
+  }
+}
+body {
+  font-family: @fontRegular;
+}
+a, button{
+  cursor: pointer;
+  &:focus{
+      outline: none;
+  }
+}
+input{
+  cursor: text;
+  &:focus{
+      outline: none;
+  }
+}
+a{
+  text-decoration: none;
+}

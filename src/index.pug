@@ -1,0 +1,21 @@
+extends templates/template
+
+block title
+	title Yoga
+block append style
+block content
+	main.page
+		include modules/header-module
+		include blocks/banner
+		include blocks/info
+		include blocks/about
+		include blocks/advantages
+		include blocks/classes
+		include blocks/appointment
+		include blocks/trainers
+		include blocks/callback
+	include blocks/footer
+	
+block append script
+	script(src='js/store-scroll.js')
+	script(src='js/scroll-anchors.js')

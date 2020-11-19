@@ -1,0 +1,48 @@
+.info{
+    padding: 50px 0;
+    &-items{
+        .row-flex();
+        .ssm(justify-content, center);
+        &__item{
+            .col();
+            .size(4);
+            .size-ssm(6);
+            .size-xs(12);
+            padding: 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .page__icon{
+                &_lotus{
+                    .sprite(@icon-lotus);
+                }
+                &_man-trening{
+                    .sprite(@icon-man-trening);
+                }
+                &_mat{
+                    .sprite(@icon-mat);
+                }
+            }
+        }
+    }
+    &.animated{
+        .page__title-h2,
+        .page__text{
+            .animated({
+                .fadeInDown();
+            });
+        }
+        .info-items__item{
+            .animated({
+                .zoomIn();
+            });  
+            &:nth-child(2){
+                .delay(.2s);
+            }
+            &:nth-child(3){
+                .delay(.4s);
+            }
+        }
+    }
+}
